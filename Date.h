@@ -1,4 +1,11 @@
 #pragma once
+#include <iostream>
+using namespace std;
+
+class Date;
+ostream& operator<<(ostream&, const Date&);
+istream& operator >> (istream&, Date&);
+
 class Date
 {
 private:
@@ -23,7 +30,7 @@ public:
 		int olderYear;
 		int newerYear;
 		daysTotal = 0;
-		
+
 		if (year < second.year)
 		{
 			olderDay = day;
@@ -90,17 +97,17 @@ public:
 			daysTotal = (daysOfYear - daysOfYear2) + 2;
 		}
 		dayDiffPrint();
-		
+
 		return Date(month - second.month, day - second.day, year - second.year);
 	}
-	
+
 	Date operator++()
 	{
 		++day;
 		checkDateChange(day);
 		return *this;
 	}
-	
+
 	Date operator++(int)
 	{
 		Date temp = *this;
@@ -118,26 +125,28 @@ public:
 
 	Date operator--(int)
 	{
-		Date temp = *this; 
+		Date temp = *this;
 		day--;
 		checkDateChange(day);
 		return temp;
 	}
 
-	friend ostream& operator<<(ostream& out, const Date& p)
+	friend ostream& operator << (ostream& out, const Date& p)
 	{
-		out << "Month: " << p.month << ", Day: " << p.day << ", Year:" << p.year;
+		out << "Month: " << p.month << ", Day: " << p.day << ", Year: " << p.year;
 		return out;
 	}
 
-	friend istream& operator>>(istream& in, Date& p) 
+	friend istream& operator >> (istream& in, Date& p)
 	{
 		cout << "Enter Month: ";
 		in >> ws;
 		in >> p.month;
 		cout << "Enter Day: ";
+		in >> ws;
 		in >> p.day;
 		cout << "Enter Year: ";
+		in >> ws;
 		in >> p.year;
 		return in;
 	}

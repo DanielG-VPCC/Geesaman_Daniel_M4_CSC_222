@@ -195,5 +195,7 @@ void test14b()
 
 void test15()
 {
-
+    Date p1;
+    cin >> p1;
+    cout << p1;
 }
