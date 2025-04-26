@@ -2,7 +2,11 @@
 //
 
 #include <iostream>
-#include "policeOffice.h"
+#include <string>
+#include "policeOfficer.h"
+#include "parkingTicket.h"
+#include "parkingMeter.h"
+#include "parkedCar.h"
 using namespace std;
 
 void scenario();
@@ -20,10 +24,10 @@ int main()
 
 void scenario()
 {
-    parkedCar parkedCar("Toyota", "Camry", "Red", "XYZ123", 30);
-    parkingMeter parkingMeter(40);
-    ticketOfficer ticketOfficer("John Doe", 5678);
-    ticketOfficer.isTimeExpired();
+    parkedCar parkedCar{"Toyota", "Camry", "Red", "XYZ123", 30};
+    parkingMeter parkingMeter{30};
+    policeOfficer policeOfficer{"John Doe", 5678};
+    policeOfficer.examineTime();
 }
 
 void scenario2()

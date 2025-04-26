@@ -128,10 +128,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Geesaman_Daniel_M4_CSC_222.cpp" />
-    <ClCompile Include="policeOffice.cpp" />
+    <ClCompile Include="parkedCar.cpp" />
+    <ClCompile Include="parkingMeter.cpp" />
+    <ClCompile Include="parkingTicket.cpp" />
+    <ClCompile Include="policeOfficer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="policeOffice.h" />
+    <ClInclude Include="parkedCar.h" />
+    <ClInclude Include="parkingMeter.h" />
+    <ClInclude Include="parkingTicket.h" />
+    <ClInclude Include="policeOfficer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
