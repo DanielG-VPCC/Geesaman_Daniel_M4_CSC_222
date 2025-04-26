@@ -128,6 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Geesaman_Daniel_M4_CSC_222.cpp" />
+    <ClCompile Include="policeOffice.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="policeOffice.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

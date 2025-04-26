@@ -2,8 +2,41 @@
 //
 
 #include <iostream>
+#include "policeOffice.h"
+using namespace std;
+
+void scenario();
+void scenario2();
+void scenario3();
+void scenario4();
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    scenario();
+    scenario2();
+    scenario3();
+    scenario4();
+}
+
+void scenario()
+{
+    parkedCar parkedCar("Toyota", "Camry", "Red", "XYZ123", 30);
+    parkingMeter parkingMeter(40);
+    ticketOfficer ticketOfficer("John Doe", 5678);
+    ticketOfficer.isTimeExpired();
+}
+
+void scenario2()
+{
+
+}
+
+void scenario3()
+{
+
+}
+
+void scenario4()
+{
+
 }
