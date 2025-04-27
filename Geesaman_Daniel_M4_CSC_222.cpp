@@ -53,18 +53,27 @@ void scenario3()
 }
 
 void scenario4()
-{
+{    
     cout << "Scenario 4" << endl;
-    parkedCar paCar{ "Ford", "Mustang", "Black", "LMN456", 190 };
-    parkingMeter paMeter{ 60 };
-    policeOfficer policeOfficer{ "James Brown", 4321 };
-    policeOfficer.examineTime(paMeter, paCar);
-    paCar.~parkedCar();
-    paMeter.~parkingMeter();
+    parkedCar* paCar = new parkedCar("Hyundai", "Veloster", "Yellow", "PKH464", 50);
+    parkingMeter* paMeter = new parkingMeter(60);
+    policeOfficer policeOfficer{ "Jimmy Dean", 5768 };
+    policeOfficer.examineTime(*paMeter, *paCar);
+    delete paCar;
+    delete paMeter;
     cout << endl << endl;
 
-    parkedCar paCar{ "F", "M", "B", "LKN456", 240 };
-    parkingMeter paMeter{ 60 };
-    policeOfficer.examineTime(paMeter, paCar);
+    paCar = new parkedCar("Ford", "F150", "Green", "LKN456", 240);
+    paMeter = new parkingMeter(60);
+    policeOfficer.examineTime(*paMeter, *paCar);
+    delete paCar;
+    delete paMeter;
+    cout << endl << endl;
+
+    paCar = new parkedCar("Honda", "Accord", "Grey", "CAE753", 400);
+    paMeter = new parkingMeter(30);
+    policeOfficer.examineTime(*paMeter, *paCar);
+    delete paCar;
+    delete paMeter;
     cout << endl << endl;
 }

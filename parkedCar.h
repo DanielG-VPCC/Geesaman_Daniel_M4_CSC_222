@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <iostream>
 using namespace std;
 
 class parkedCar
@@ -22,7 +23,7 @@ public:
 	}
 	~parkedCar()
 	{
-		
+		//cout << "object destroyed";
 	}
 
 	string getMake() { return make; }
