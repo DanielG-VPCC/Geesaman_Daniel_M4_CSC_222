@@ -1,7 +1,4 @@
 #pragma once
-#include "policeOfficer.h"
-#include "parkingTicket.h"
-#include "parkingMeter.h"
 #include <string>
 using namespace std;
 
@@ -14,7 +11,7 @@ private:
 	string licenseNum;
 	int timeParked;
 public:
-	parkedCar() { timeParked = 0; }
+	parkedCar() {}
 	parkedCar(string ma, string mo, string co, string liNum, int t)
 	{
 		make = ma;
@@ -23,6 +20,10 @@ public:
 		licenseNum = liNum;
 		timeParked = t;
 	}
+	~parkedCar()
+	{
+		
+	}
 
 	string getMake() { return make; }
 	string getModel() { return model; }
@@ -30,4 +31,3 @@ public:
 	string getNum() { return licenseNum; }
 	int getParkedTime() { return timeParked; }
 };
-

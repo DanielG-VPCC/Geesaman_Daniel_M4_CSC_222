@@ -24,23 +24,47 @@ int main()
 
 void scenario()
 {
+    cout << "Scenario 1" << endl;
     parkedCar parkedCar{"Toyota", "Camry", "Red", "XYZ123", 30};
-    parkingMeter parkingMeter{30};
+    parkingMeter parkingMeter{40};
     policeOfficer policeOfficer{"John Doe", 5678};
-    policeOfficer.examineTime();
+    policeOfficer.examineTime(parkingMeter, parkedCar);
+    cout << endl<<endl;
 }
 
 void scenario2()
 {
-
+    cout << "Scenario 2" << endl;
+    parkedCar parkedCar{ "Honda", "Accord", "Blue", "ABC987", 70 };
+    parkingMeter parkingMeter{ 60 };
+    policeOfficer policeOfficer{ "Jane Smith", 1234 };
+    policeOfficer.examineTime(parkingMeter, parkedCar);
+    cout << endl << endl;
 }
 
 void scenario3()
 {
-
+    cout << "Scenario 3" << endl;
+    parkedCar parkedCar{ "Ford", "Mustang", "Black", "LMN456", 190 };
+    parkingMeter parkingMeter{ 60 };
+    policeOfficer policeOfficer{ "James Brown", 4321 };
+    policeOfficer.examineTime(parkingMeter, parkedCar);
+    cout << endl << endl;
 }
 
 void scenario4()
 {
+    cout << "Scenario 4" << endl;
+    parkedCar paCar{ "Ford", "Mustang", "Black", "LMN456", 190 };
+    parkingMeter paMeter{ 60 };
+    policeOfficer policeOfficer{ "James Brown", 4321 };
+    policeOfficer.examineTime(paMeter, paCar);
+    paCar.~parkedCar();
+    paMeter.~parkingMeter();
+    cout << endl << endl;
 
+    parkedCar paCar{ "F", "M", "B", "LKN456", 240 };
+    parkingMeter paMeter{ 60 };
+    policeOfficer.examineTime(paMeter, paCar);
+    cout << endl << endl;
 }

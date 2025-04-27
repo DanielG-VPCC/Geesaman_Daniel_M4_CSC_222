@@ -10,40 +10,20 @@ class policeOfficer
 {
 private:
 	string officerName;
-	double badgeNum;
+	double badgeNum; 
+	parkedCar PC;
 public:
+	policeOfficer();
 	policeOfficer(string na, double num)
 	{
 		officerName = na;
 		badgeNum = num;
+		PC.getColor();
 	}
+
 	string getOfficerName() { return officerName; }
 	double getBadgeNum() { return badgeNum; }
 
-	bool examineTime()
-	{
-		parkingMeter meterT;
-		parkedCar carT;
-		if (meterT.getPaidTime() < carT.getParkedTime())
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-	}
-
-	void issueTicket()
-	{
-		if (examineTime() == true)
-		{
-			parkingTicket &printTicket();
-		}
-		else
-		{
-			cout << "car passes inspection";
-		}
-	}
+	bool examineTime(parkingMeter& paMeter, parkedCar& paCar);
+	void issueTicket(parkingMeter& paMeter, parkedCar& paCar);
 };
-
